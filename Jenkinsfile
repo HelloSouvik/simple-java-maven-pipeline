@@ -8,12 +8,12 @@ pipeline {
     stages {
     	stage ('Initialize') {
         	steps {
-        		sh 'mvn -v'
 	            sh '''
 	              echo "PATH = ${PATH}"
 	              echo "M2_HOME = ${M2_HOME}"
 	              echo "JAVA_HOME = ${JAVA_HOME}"
 	            '''
+        		sh 'mvn -v'
           	}
         }
         stage('Build') {
